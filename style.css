@@ -1,0 +1,157 @@
+:root {
+  --black: #000000;
+  --blue: #14213d;
+  --yellow: #fca311;
+  --gray: #e5e5e5;
+  --white: #ffffff;
+  --sports: green;
+  --finance: gold;
+  --entertainment: indigo;
+  --tech: royalblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray);
+}
+
+body > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  background-color: var(--blue);
+  color: var(--gray);
+
+  height: 5rem;
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+ul li {
+  background-color: var(--blue);
+  padding: 0.8rem;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+section {
+  padding: 1rem;
+  margin: 1rem;
+
+  border-radius: 25px;
+  border: 0.5px solid var(--black);
+  box-shadow: -1px 1px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+  background-color: var(--blue);
+
+  justify-content: center;
+}
+
+section h2 {
+  color: var(--gray);
+  margin: 1rem;
+  border-bottom: 1px solid var(--gray);
+  width: 100%;
+}
+
+article {
+  border: 1px solid var(--black);
+  border-radius: 25px;
+  box-shadow: -1px 1px;
+  padding: 1rem 1rem 4rem 1rem;
+  background-color: var(--gray);
+  position: relative;
+}
+
+article > a {
+  align-self: flex-end;
+  background-color: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem;
+
+  border-radius: 25px;
+
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 25px;
+  align-self: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  article {
+    flex-basis: 30%;
+  }
+
+  section {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body > header {
+    flex-direction: column;
+    height: 7rem;
+    text-align: center;
+    justify-content: center;
+  }
+  ul {
+    display: none;
+  }
+  section h2 {
+    margin-bottom: 0;
+  }
+  article {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+/* 
+
+Colorindo Sections
+
+*/
+
+body > section:nth-child(2) {
+  background-color: var(--sports);
+}
+
+body > section:nth-child(3) {
+  background-color: var(--finance);
+}
+
+body > section:nth-child(4) {
+  background-color: var(--entertainment);
+}
+
+body > section:nth-child(5) {
+  background-color: var(--tech);
+}
