@@ -2,6 +2,8 @@
   --white: #ecf0f1;
   --blue: #182c61;
 }
+
+/* Header */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 }
 
 header {
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   background-color: var(--blue);
   color: var(--white);
 }
@@ -25,7 +27,55 @@ header nav li a {
 }
 
 .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+/* About */
+header .container,
+section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-list img {
+  height: 1.5rem;
+}
+
+.brand-list li {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+section .container {
+  align-items: flex-start;
+}
+
+section {
+  padding: 1.5rem 0;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+section {
+  color: var(--blue);
+}
+
+section p {
+  margin-bottom: 0.5rem;
+}
+
+.store-front {
+  margin-right: 2rem;
+}
+
+/* Form */
+/* Footer */
