@@ -77,5 +77,41 @@ section p {
   margin-right: 2rem;
 }
 
+/* Contact */
+#contact .container {
+  display: block;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Form */
-/* Footer 
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 20rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+form textarea {
+  resize: none;
+  height: 180px;
+}
+
+form button {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: var(--blue);
+}
+
+/* Footer */
