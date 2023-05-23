@@ -1,0 +1,31 @@
+:root {
+  --white: #ecf0f1;
+  --blue: #182c61;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 1rem 0;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+header nav li {
+  display: inline;
+  margin-left: 1rem;
+  font-size: 18px;
+}
+
+header nav li a {
+  color: var(--white);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
