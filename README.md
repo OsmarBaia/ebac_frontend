@@ -23,3 +23,7 @@ Esse repositório destina-se a armazenar as atividades práticas do módulo fron
 [ ] React  
 [ ] Redux  
 [ ] Cypress
+
+## Atividade Finalizada
+
+![alt Gif mostrando o formulario de cadastro de cartões funcionando](./images/screenShots/ezgif.com-video-to-gif.gif "Formulário Funcionando").
