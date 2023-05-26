@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+
+    <title>Cadastrar novo cartão</title>
+    <link rel="icon" type="image/x-icon" href="/images/credit-card.png" />
+  </head>
+  <body>
+    <div id="cardForm">
+      <header>
+        <h1>cadastre seu cartão</h1>
+      </header>
+      <main>
+        <div id="cardContainer" class="">
+          <div id="cardInfo" class="">
+            <div id="cardFront">
+              <div>
+                <p id="cardNumber" class="">1234 5678 9876 5432</p>
+              </div>
+              <div>
+                <div>
+                  <p id="cardName" class="">Nome impresso no cartão</p>
+                </div>
+                <div>
+                  <p>
+                    <span class="cardDate"
+                      >since: <span id="cardSince" class="">08/22</span></span
+                    >
+                    <span class="cardDate"
+                      >valid: <span id="cardValid" class="">09/23</span></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="cardBack">
+              <p><span> cvc:</span> <span id="cardCvc">123</span></p>
+            </div>
+          </div>
+        </div>
+
+        <form action="">
+          <label for="form_number">Numero: </label>
+          <input
+            id="form_number"
+            type="text"
+            inputmode="numeric"
+            placeholder="1234 5678 9876 5432"
+            maxlength="16"
+            size="18"
+            required
+          />
+          <br />
+          <label for="form_name">Nome: </label>
+          <input id="form_name" type="text" placeholder="Nome no cartão" />
+          <br />
+          <span>
+            <label for="form_sinceDate">Emissão: </label>
+            <input
+              id="form_sinceDate"
+              type="text"
+              inputmode="numeric"
+              maxlength="5"
+              placeholder="08/22"
+              size="1"
+              required
+            />
+
+            <label for="form_validDate">Validade: </label>
+            <input
+              id="form_validDate"
+              type="text"
+              inputmode="numeric"
+              maxlength="5"
+              placeholder="09/23"
+              size="1"
+              required
+            />
+
+            <label for="form_cvc">CVC: </label>
+            <input
+              id="form_cvc"
+              type="password"
+              placeholder="123"
+              min="000"
+              max="999"
+              maxlength="3"
+              size="1"
+              required
+            />
+          </span>
+          <br />
+          <button id="submit_button" type="submit">Cadastrar</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

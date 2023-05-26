@@ -2,13 +2,13 @@
 
 Esse repositório destina-se a armazenar as atividades práticas do módulo front-end do curso full stack da EBAC.
 
-## Tópicos abordados
+## Tópicos
 
 [X] Git & GitHub  
 [X] Html  
 [X] Css  
-[ ] VERCEL  
-[ ] Javascript (JS)  
+[X] VERCEL  
+[X] Javascript (JS) &larr;  
 [ ] Jquery  
 [ ] BootStrap  
 [ ] Sass  

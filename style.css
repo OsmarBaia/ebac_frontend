@@ -1,0 +1,227 @@
+:root {
+  --text-light: #ffffff;
+  --body-background: #e5e5e5;
+  --text-dark: black;
+  --highligh: #e63946;
+  --form-button: #8338ec;
+  --form-background: #ffffff;
+  --form-border: #e0e1dd;
+  --shadows: #0d1b2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header h1 {
+  text-transform: capitalize;
+  padding: 16px;
+}
+
+body {
+  background-color: var(--body-background);
+}
+
+#cardForm {
+  min-width: 260px;
+  max-width: 360px;
+
+  margin: 5rem auto 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  border-radius: 24px;
+  background-color: var(--form-background);
+
+  border: 2px solid var(--form-border);
+  box-shadow: 1px 1px var(--shadows);
+}
+
+#cardForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-top: 16px;
+  width: 100%;
+  padding: 16px;
+}
+
+#formDates {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#cardForm form input {
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+#cardForm form input[id="validDate"],
+#cardForm form input[id="sinceDate"] {
+  text-align: center;
+  width: 42px;
+}
+
+#cardForm form input[id="cvc"] {
+  text-align: center;
+  width: 32px;
+}
+
+#cardForm form > button {
+  margin-top: 8px;
+  padding: 8px;
+  align-self: center;
+  border-radius: 20px;
+  background-color: var(--form-button);
+  color: var(--text-light);
+}
+
+#cardForm form > button:active {
+  transform: translate(0px 1px);
+  box-shadow: 1px 0px var(--shadows);
+}
+
+#cardForm form button:disabled {
+  background-color: #8d99ae;
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+form input:hover,
+form button:hover {
+  box-shadow: 1px 1px var(--shadows);
+}
+
+#cardContainer {
+  background-color: transparent;
+  height: auto;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#cardInfo {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#cardFront,
+#cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+#cardFront {
+  /* Form */
+  border-radius: 10px;
+  /* BackGroud */
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #4a4a3b 45%, #a1a1a1 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #000000 0%,
+    #4a4a3b 45%,
+    #a1a1a1 100%
+  );
+  background: linear-gradient(to bottom, #000000 0%, #4a4a3b 45%, #a1a1a1 100%);
+  /* Layout */
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+#cardNumber {
+  font-size: 32px;
+  padding: 1rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#cardFront div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#cardName {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 1rem;
+  width: 170px;
+  height: 60px;
+  text-transform: uppercase;
+}
+
+#cardFront div:nth-child(2) div:nth-child(2) {
+  margin-right: 16px;
+}
+
+.cardDate {
+  font-size: xx-small;
+  font-weight: lighter;
+  margin-left: 4px;
+  max-width: 6px;
+}
+
+.cardDate > span {
+  font-size: small;
+  font-weight: bold;
+}
+
+#cardBack {
+  /* Form */
+  border-radius: 10px;
+  /* BackGroud */
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #4a4a3b 45%, #a1a1a1 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #000000 0%,
+    #4a4a3b 45%,
+    #a1a1a1 100%
+  );
+  background: linear-gradient(to bottom, #000000 0%, #4a4a3b 45%, #a1a1a1 100%);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+#cardBack p {
+  height: 36px;
+  background-color: var(--text-light);
+  padding-right: 48px;
+  line-height: 36px;
+}
+
+.flipping {
+  transform: rotateY(180deg);
+}
+
+.highlightBorder {
+  border: 2px solid var(--highligh);
+}
