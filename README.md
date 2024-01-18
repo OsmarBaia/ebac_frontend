@@ -7,9 +7,9 @@ Esse repositório destina-se a armazenar as atividades práticas do módulo fron
 [X] Git & GitHub  
 [X] Html  
 [X] Css  
-[ ] VERCEL  
-[ ] Javascript (JS)  
-[ ] Jquery  
+[X] VERCEL  
+[X] Javascript (JS)  
+[X] Jquery  
 [ ] BootStrap  
 [ ] Sass  
 [ ] Gulp  
