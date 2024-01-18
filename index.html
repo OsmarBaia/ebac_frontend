@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script>
+
+    <!-- jQuery Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js" defer></script>
+
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" defer></script>
+
+    <title>Cadastro de Cliente</title>
+</head>
+
+<body class="w-full h-screen bg-slate-400 flex justify-center items-center">
+    <div class="
+        container 
+        w-4/5 h-auto min-w-60 min-h-96 max-w-3xl	
+        sm:m-3 
+        bg-gray-200 
+        flex flex-col flex-grow
+        justify-center items-center 
+        rounded-lg 
+        shadow-md shadow-black 
+        md:flex-row">
+        <img src="" alt="" class="size-full min-w-60 min-h-96 border-2">
+
+        <form action="post" class="
+            size-full min-w-60 min-h-96 max-w-3xl h-auto py-5 flex flex-col items-center gap-5">
+
+            <div class="
+            grid grid-cols-1 gap-4
+            sm:grid-cols-2
+            md:grid-cols-4
+            ">
+                <!-- Nome  -->
+                <div class="
+                    w-min col-span-1 
+                    sm:col-span-2
+
+                    flex flex-wrap items-center justify-start">
+                    <label for="clienteNome" class="w-fit">Nome:</label>
+                    <input type="text" name="clienteNome" id="clienteNome" class="w-32 rounded-md px-2 mx-2">
+                </div>
+                <!-- SobreNome  -->
+                <div class="
+                    w-min col-span-1 
+                    sm:col-span-2
+
+                    flex flex-wrap items-center justify-start">
+                    <label for="clienteSobreNome" class="w-fit">Sobrenome:</label>
+                    <input type="text" name="clienteSobreNome" id="clienteSobreNome" class="w-32 rounded-md  px-2 mx-2">
+                </div>
+                <!-- Email  -->
+                <div class="w-min col-span-1 sm:col-span-4 flex flex-wrap items-center justify-start">
+                    <label for="clienteEmail" class="w-fit">Email:</label>
+                    <input type="email" name="clienteEmail" id="clienteEmail" class="w-60 rounded-md px-2 mx-2">
+                </div>
+                <!-- Telefone  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                    <label for="clienteTelefone" class="w-fit">Telefone:</label>
+                    <input type="tel" name="clienteTelefone" id="clienteTelefone" class="w-36 rounded-md px-2 mx-2">
+                </div>
+                <!-- CEP  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex items-center mt-4 justify-start">
+                    <label for="clienteCEP" class="w-fit">CEP:</label>
+                    <input type="email" name="clienteCEP" id="clienteCEP" class="w-24 rounded-md  px-2 mx-2">
+                </div>
+                <!-- Endereço  -->
+                <div class="w-min col-span-1 sm:col-span-4 flex flex-wrap items-center justify-start">
+                    <label for="clienteLogradouro" class="w-fit">Endereço:</label>
+                    <input type="email" name="clienteLogradouro" id="clienteLogradouro"
+                        class="w-60 rounded-md px-2 mx-2">
+                </div>
+                <!-- Numero  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+
+                    <label for="clienteComplemento" class="w-fit">Numero:</label>
+                    <input type="text" name="clienteComplemento" id="clienteComplemento"
+                        class="w-16 rounded-md px-2 mx-2">
+                </div>
+                <!-- Bairro  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                    <label for="clienteBairro" class="w-fit">Bairro:</label>
+                    <input type="text" name="clienteBairro" id="clienteBairro" class="w-28 rounded-md px-2 mx-2">
+                </div>
+                <!-- Cidade  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                    <label for="clienteLocalidade" class="w-fit">Cidade:</label>
+                    <input type="email" name="clienteLocalidade" id="clienteLocalidade"
+                        class="w-28 rounded-md px-2 mx-2">
+                </div>
+                <!-- Estado  -->
+                <div class="w-min col-span-1 sm:col-span-2 flex items-center mt-4 justify-start">
+                    <label for="clienteUF" class="w-fit">Estado:</label>
+                    <input type="email" name="clienteUF" id="clienteUF" maxlength="2"
+                        class="w-10 rounded-md px-2 ml-7 mr-2">
+                </div>
+            </div>
+
+            <button type="submit"
+                class="mx-2 bg-blue-400 rounded-lg px-3 py-2 shadow-sm shadow-black hover:opacity-80">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
