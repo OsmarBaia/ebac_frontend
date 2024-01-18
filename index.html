@@ -8,15 +8,17 @@
     <!-- Tailwind Css -->
     <script src="https://cdn.tailwindcss.com" defer></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
-    <!-- jQuery Mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js" defer></script>
+    <!-- Jquery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" defer></script>
 
-    <!-- jQuery Validation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" defer></script>
+    <!-- Jquery Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
+
+    <!-- Custom JS -->
+    <script src="./main.js" defer></script>
 
     <title>Cadastro de Cliente</title>
 </head>
@@ -24,86 +26,167 @@
 <body class="w-full h-screen bg-slate-400 flex justify-center items-center">
     <div class="
         container 
-        w-4/5 h-auto min-w-60 min-h-96 max-w-3xl	
-        sm:m-3 
+        min-w-60 min-h-96 max-w-3xl	
+        sm:w-4/5 sm:m-3 
         bg-gray-200 
-        flex flex-col flex-grow
+        flex flex-col 
         justify-center items-center 
         rounded-lg 
         shadow-md shadow-black 
         md:flex-row">
-        <img src="" alt="" class="size-full min-w-60 min-h-96 border-2">
 
-        <form action="post" class="
-            size-full min-w-60 min-h-96 max-w-3xl h-auto py-5 flex flex-col items-center gap-5">
+
+        <div class="bg-cover bg-center rounded-lg" style="
+            width: 100%;
+            height: 480px;
+            background-image: url('./Big_phone_with_cart.jpg');">
+
+            <!-- TODO: Inserir um texto de CallToAction -->
+        </div>
+        <form action="post" id="form-registro" class="
+            size-full 
+            min-w-60 min-h-96 max-w-3xl h-auto py-5 
+            flex flex-col items-center gap-5
+            ">
 
             <div class="
-            grid grid-cols-1 gap-4
-            sm:grid-cols-2
-            md:grid-cols-4
+            px-2
+            grid 
+            grid-cols-2 gap-4
+            sm:grid-cols-4            
             ">
+                <!-- TODO: Aumentar tamanho campo e-mail e endereço pre sm e pos sm -->
+
                 <!-- Nome  -->
                 <div class="
+                    relative                    
                     w-min col-span-1 
                     sm:col-span-2
-
                     flex flex-wrap items-center justify-start">
                     <label for="clienteNome" class="w-fit">Nome:</label>
-                    <input type="text" name="clienteNome" id="clienteNome" class="w-32 rounded-md px-2 mx-2">
+                    <input type="text" name="clienteNome" id="clienteNome"
+                        class="relative w-32 rounded-md px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- SobreNome  -->
                 <div class="
+                    relative
                     w-min col-span-1 
                     sm:col-span-2
 
                     flex flex-wrap items-center justify-start">
                     <label for="clienteSobreNome" class="w-fit">Sobrenome:</label>
-                    <input type="text" name="clienteSobreNome" id="clienteSobreNome" class="w-32 rounded-md  px-2 mx-2">
+                    <input type="text" name="clienteSobreNome" id="clienteSobreNome"
+                        class="relative w-32 rounded-md  px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- Email  -->
-                <div class="w-min col-span-1 sm:col-span-4 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-2 
+                    sm:col-span-4 
+                    flex flex-wrap items-center justify-start">
                     <label for="clienteEmail" class="w-fit">Email:</label>
-                    <input type="email" name="clienteEmail" id="clienteEmail" class="w-60 rounded-md px-2 mx-2">
+                    <input type="email" name="clienteEmail" id="clienteEmail"
+                        class="relative w-60 rounded-md px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- Telefone  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1 
+                    sm:col-span-2 
+                    flex flex-wrap items-center justify-start">
                     <label for="clienteTelefone" class="w-fit">Telefone:</label>
-                    <input type="tel" name="clienteTelefone" id="clienteTelefone" class="w-36 rounded-md px-2 mx-2">
+                    <input type="tel" name="clienteTelefone" id="clienteTelefone"
+                        class="relative w-36 rounded-md px-2 mx-2 shadow-sm shadow-black" maxlength="11">
                 </div>
                 <!-- CEP  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex items-center mt-4 justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1 
+                    sm:col-span-2 
+                    flex items-center mt-4 justify-start">
                     <label for="clienteCEP" class="w-fit">CEP:</label>
-                    <input type="email" name="clienteCEP" id="clienteCEP" class="w-24 rounded-md  px-2 mx-2">
+                    <input type="text" name="clienteCEP" id="clienteCEP"
+                        class="relative w-24 rounded-md  px-2 mx-2 shadow-sm shadow-black" maxlength="8">
+                    <!-- <span class="absolute top-8 left-0 text-xs font-light text-red-500">error</span> -->
                 </div>
                 <!-- Endereço  -->
-                <div class="w-min col-span-1 sm:col-span-4 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-2
+                    sm:col-span-4 
+                    flex flex-wrap items-center justify-start">
                     <label for="clienteLogradouro" class="w-fit">Endereço:</label>
-                    <input type="email" name="clienteLogradouro" id="clienteLogradouro"
-                        class="w-60 rounded-md px-2 mx-2">
+                    <input type="text" name="clienteLogradouro" id="clienteLogradouro"
+                        class="relative w-60 rounded-md px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- Numero  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1 
+                    sm:col-span-2 
+                    flex flex-wrap items-center justify-start">
 
                     <label for="clienteComplemento" class="w-fit">Numero:</label>
                     <input type="text" name="clienteComplemento" id="clienteComplemento"
-                        class="w-16 rounded-md px-2 mx-2">
+                        class="relative w-16 rounded-md px-2 mx-2 shadow-sm shadow-black" maxlength="6">
                 </div>
                 <!-- Bairro  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1
+                    sm:col-span-2 
+                    flex flex-wrap items-center justify-start">
                     <label for="clienteBairro" class="w-fit">Bairro:</label>
-                    <input type="text" name="clienteBairro" id="clienteBairro" class="w-28 rounded-md px-2 mx-2">
+                    <input type="text" name="clienteBairro" id="clienteBairro"
+                        class="relative w-28 rounded-md px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- Cidade  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex flex-wrap items-center justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1 
+                    sm:col-span-2 
+                    flex flex-wrap items-center justify-start">
                     <label for="clienteLocalidade" class="w-fit">Cidade:</label>
-                    <input type="email" name="clienteLocalidade" id="clienteLocalidade"
-                        class="w-28 rounded-md px-2 mx-2">
+                    <input type="text" name="clienteLocalidade" id="clienteLocalidade"
+                        class="relative w-28 rounded-md px-2 mx-2 shadow-sm shadow-black">
                 </div>
                 <!-- Estado  -->
-                <div class="w-min col-span-1 sm:col-span-2 flex items-center mt-4 justify-start">
+                <div class="
+                    relative
+                    w-min col-span-1  
+                    sm:col-span-2 
+                    flex items-center mt-4 justify-start">
                     <label for="clienteUF" class="w-fit">Estado:</label>
-                    <input type="email" name="clienteUF" id="clienteUF" maxlength="2"
-                        class="w-10 rounded-md px-2 ml-7 mr-2">
+                    <select class="relative w-18 rounded-md px-2 ml-7 mr-2 shadow-sm shadow-black" maxlength="2"
+                        id="clienteUF" name="clienteUF">
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
                 </div>
             </div>
 
