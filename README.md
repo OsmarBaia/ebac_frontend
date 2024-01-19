@@ -29,3 +29,4 @@ Esse repositório destina-se a armazenar as atividades práticas do módulo fron
 
 
 ## Preview
+!['Form preview gif'](Cadastro-de-Cliente-_1_.gif)
