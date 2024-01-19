@@ -96,9 +96,12 @@ $(document).ready(function () {
         },
         // Mesagem de erro customizada
         errorPlacement: function (label, element) {
-            if (element[0].id === 'clienteCEP') {
+            if (element[0].id === 'clienteCEP' || element[0].id === 'clienteUF') {
                 label.addClass('absolute top-8 left-0 text-xs font-light text-red-500');
-            } else {
+            } else if (element[0].id === 'clienteCEP') {
+
+            }
+            else {
                 label.addClass('absolute top-12 left-2 text-xs font-light text-red-500');
             }
             label.insertAfter(element);

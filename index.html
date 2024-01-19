@@ -20,6 +20,19 @@
     <!-- Custom JS -->
     <script src="./main.js" defer></script>
 
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
     <title>Cadastro de Cliente</title>
 </head>
 
@@ -168,8 +181,8 @@
                     sm:col-span-2 
                     flex items-center mt-4 justify-start">
                     <label for="clienteUF" class="w-fit">Estado:</label>
-                    <select class="relative w-18 rounded-md px-2 ml-1 mr-2 shadow-sm shadow-black" minlength="2"
-                        maxlength="2" id="clienteUF" name="clienteUF">
+                    <select class="relative w-18 rounded-md px-2 ml-1 mr-2 shadow-sm shadow-black" maxlength="2"
+                        id="clienteUF" name="clienteUF">
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
                         <option value="AP">AP</option>
