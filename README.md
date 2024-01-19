@@ -23,3 +23,9 @@ Esse repositório destina-se a armazenar as atividades práticas do módulo fron
 [ ] React  
 [ ] Redux  
 [ ] Cypress
+
+## About Project
+
+
+
+## Preview

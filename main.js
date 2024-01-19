@@ -1,30 +1,37 @@
 $(document).ready(function () {
     // Limpar dados do Formulário
-    function makeContactEmpty() {
-        $('#clienteNome').val('');
-        $('#clienteSobrenome').val('');
-        $('#clienteEmail').val('');
-        $('#clienteTelefone').val('');
-    }
-    function makeAddressEmpty() {
-        $('#clienteLogradouro').val('');
-        $('#clienteComplemento').val('');
-        $('#clienteBairro').val('');
-        $('#clienteLocalidade').val('');
-        $('#clienteUF').val('');
-    }
+    $('#clienteNome').val('');
+    $('#clienteSobreNome').val('');
+    $('#clienteCPF').val('');
+    $('#clienteEmail').val('');
+    $('#clienteTelefone').val('');
+    $('#clienteCEP').val('');
+    $('#clienteLogradouro').val('');
+    $('#clienteComplemento').val('');
+    $('#clienteBairro').val('');
+    $('#clienteLocalidade').val('');
+    $('#clienteUF').val('');
 
-    makeContactEmpty();
-    makeAddressEmpty();
+    // Adicionando Mascaras
+    $('#clienteCPF').mask('000.000.000-09', { reverse: true });
+    $('#clienteTelefone').mask('(00) 0000-0009');
+    $('#clienteCEP').mask('00000-009');
 
-    //  Validação de Campos
+    // Validação de Campos
     $('#form-registro').validate({
         rules: {
             clienteNome: {
                 required: true
             },
             clienteTelefone: {
-                required: true
+                required: true,
+                minlength: 10,
+                maxlength: 14,
+            },
+            clienteCPF: {
+                required: true,
+                minlength: 11,
+                maxlength: 14,
             },
             clienteEmail: {
                 required: true,
@@ -33,13 +40,9 @@ $(document).ready(function () {
             clienteCEP: {
                 required: true,
                 minlength: 8,
-                maxlength: 8,
-                cepBR: true,
+                maxlength: 9,
             },
             clienteLogradouro: {
-                required: true
-            },
-            clienteComplemento: {
                 required: true
             },
             clienteBairro: {
@@ -56,24 +59,29 @@ $(document).ready(function () {
             clienteNome: {
                 required: "*Campo obrigatório",
             },
-            clienteNome: {
-                required: "* Campo Obrigatório",
+            clienteCPF: {
+                required: "*Campo obrigatório",
+                minlength: "*Tamanho inválido!",
+                maxlength: "*Tamanho inválido!",
+                digits: "*Apenas numeros!"
             },
             clienteTelefone: {
-                required: "* Campo Obrigatório"
+                required: "*Campo Obrigatório",
+                maxlength: "*Tamanho inválido!",
+                minlength: "*Tamanho inválido!",
+                digits: "*Apenas numeros!"
             },
             clienteEmail: {
-                required: "* Campo Obrigatório",
-                email: "* Formato invalido"
+                required: "*Campo Obrigatório",
+                email: "*Formato invalido"
             },
             clienteCEP: {
                 required: "*Campo obrigatório!",
-                cepBR: "*CEP inválido!"
+                minlength: "*Tamanho inválido!",
+                maxlength: "*Tamanho inválido!",
+                digits: "*Apenas numeros!"
             },
             clienteLogradouro: {
-                required: "*Campo obrigatório!"
-            },
-            clienteComplemento: {
                 required: "*Campo obrigatório!"
             },
             clienteBairro: {
@@ -86,42 +94,30 @@ $(document).ready(function () {
                 required: "*Campo obrigatório!"
             }
         },
-
+        // Mesagem de erro customizada
         errorPlacement: function (label, element) {
             if (element[0].id === 'clienteCEP') {
                 label.addClass('absolute top-8 left-0 text-xs font-light text-red-500');
             } else {
                 label.addClass('absolute top-12 left-2 text-xs font-light text-red-500');
             }
-            console.log(element);
-            console.log(element.id);
-
             label.insertAfter(element);
         },
 
         submitHandler: function (form) {
-            // Enviar formulário
-            $(form).submit();
+            form.submit(function () {
+                return true;
+            });
         }
     });
 
-    // Mascara Telefone
-    $('#clienteTelefone').blur(function () {
-        const tel = $(this).val();
-        if (tel.length === 11) {
-            $('#clienteTelefone').mask('(00) 0-0000-0000');
-        } else {
-            $('#clienteTelefone').mask('(00) 0000-0000');
-        }
-    });
+    // TODO: Validar Email
 
     // Busca endereço com base no CEP
     function pesquisarCep(cep) {
         $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
             if (data.erro) {
-                // CEP não for encontrado
-                alert("\n CEP não encontrado. \n Por favor insira manualmente. \n");
-                makeAddressEmpty();
+                // CEP não for encontrado                
             } else {
                 // Preencher campos com os dados do endereço
                 $('#clienteLogradouro').val(data.logradouro);
@@ -133,15 +129,17 @@ $(document).ready(function () {
     }
 
     // Busca e preenchimento de endereço por CEP
-    // Mascara CEP
     $('#clienteCEP').blur(function () {
-        const cep = $(this).val();
+        let cep = $(this).cleanVal();
         if (cep.length === 8) {
             pesquisarCep(cep);
-            $('#clienteCEP').mask('00000-000');
-        } else if (cep.length === 0) {
-            makeAddressEmpty();
         }
     });
 
+    //Limpando Mascaras no Submit
+    $('#submit-button').on('click', function () {
+        $('#clienteCPF').unmask();
+        $('#clienteTelefone').unmask();
+        $('#clienteCEP').unmask();
+    });
 });
