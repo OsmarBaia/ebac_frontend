@@ -1,0 +1,127 @@
+$primary-color: #FFD700; /* Dourado */
+$secondary-color: #2E8B57; /* Verde */
+$text-color: #333;
+$background-color: #F7F7F7;
+$font-family: 'Arial', sans-serif;
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.email-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.email-header {
+    background-color: $primary-color;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-banner h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.content-article{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.happy-tail,
+.pet-of-the-month {
+    flex: 1 1 calc(50% - 20px);
+    background: $secondary-color;
+    color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.happy-tail h2,
+.pet-of-the-month h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #fff;
+    color: $secondary-color;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: lighten($secondary-color, 20%);
+}
+
+.announcements {
+    padding: 20px;
+    background: $background-color;
+    border-top: 1px solid #ddd;
+}
+
+.announcements h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.announcements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.email-footer {
+    text-align: center;
+    padding: 20px;
+    background: $primary-color;
+    color: #333;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
