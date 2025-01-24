@@ -1,0 +1,44 @@
+@import 'variables.less';
+
+.profile {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: @colors[secondary-text];
+  }
+
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+  }
+
+  &__profession {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.25rem 0;
+    color: @colors[secondary-text];
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    text-align: justify;
+    text-indent: 1rem;
+  }
+}

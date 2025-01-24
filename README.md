@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Desenvolvedor Full Stack Java v2 - Módulo Front-End
 
 Esse repositório destina-se a armazenar as atividades práticas do módulo front-end do curso full stack da EBAC.
@@ -23,3 +24,18 @@ Esse repositório destina-se a armazenar as atividades práticas do módulo fron
 [ ] React  
 [ ] Redux  
 [ ] Cypress
+=======
+# Exercicio Less
+Neste exercício você deverá:
+1. Converter o estilo do projeto disponibilizado no Material de apoio para o LESS;
+
+2. Utilizar os recursos do LESS que aprendeu durante o módulo:
+    + variáveis;
+    + divisão dos arquivos;
+    + escapings;
+    + mapas.
+
+
+## Preview da página
+![alt text](image.png)
+>>>>>>> 53a5a77 (Tradução para LESS)

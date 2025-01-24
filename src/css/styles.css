@@ -152,7 +152,7 @@ body {
     }
 }
 
-@media screen and (min-width: 430px){
+@media screen and (min-width: 4px){
     .projects__link {
         line-height: 2rem;
     }
