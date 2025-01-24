@@ -1,25 +1,6 @@
-# Desenvolvedor Full Stack Java v2 - Módulo Front-End
+# Exercício AJAX
+1) Adaptar o projeto disponibilizado na plataforma para que os dados sejam preenchidos via requisição Ajax.
+2) Usar o que aprendeu no módulo sobre try catch fetch API ou xmlHttpRequest.
 
-Esse repositório destina-se a armazenar as atividades práticas do módulo front-end do curso full stack da EBAC.
-
-## Tópicos abordados
-
-[X] Git & GitHub  
-[X] Html  
-[X] Css  
-[X] VERCEL  
-[X] Javascript (JS)  
-[X] Jquery  
-[ ] BootStrap  
-[ ] Sass  
-[ ] Gulp  
-[ ] Less  
-[ ] Grunt  
-[ ] Ajax & XHTML  
-[ ] JS POO  
-[ ] JS ES6+  
-[ ] TypeScript  
-[ ] Vue.js  
-[ ] React  
-[ ] Redux  
-[ ] Cypress
+# Preview Resultado
+![image](https://github.com/user-attachments/assets/3432a078-3ef0-4b72-b84c-3b8e4824a451)
