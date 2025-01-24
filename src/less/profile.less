@@ -12,7 +12,13 @@
     width: 96px;
     height: 96px;
     border-radius: 50%;
-    background-color: @colors[secondary-text];
+
+    background-color: @colors-dark[secondary-text];
+  
+    &.light-mode {
+      background-color: @colors-light[secondary-text];
+    }
+
   }
 
   &__bio {
@@ -31,7 +37,11 @@
     font-size: 1rem;
     font-weight: 400;
     margin: 0.25rem 0;
-    color: @colors[secondary-text];
+    color: @colors-dark[secondary-text];
+  
+    &.light-mode {
+      color: @colors-light[primary];
+    }
   }
 
   &__description {

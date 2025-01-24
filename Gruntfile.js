@@ -16,6 +16,10 @@ module.exports = function (grunt) {
           files: ['./src/less/**/*.less'],
           tasks: ['less', 'cssmin'],
         },
+        scripts: {
+            files: ['./src/js/**/*.js'],
+            tasks: ['uglify'],
+          },
       },
       cssmin: {
         target: {
@@ -30,12 +34,26 @@ module.exports = function (grunt) {
           ],
         },
       },
+      uglify: {
+        target: {
+          files: [
+            {
+              expand: true,
+              cwd: './src/js/', 
+              src: ['**/*.js'], 
+              dest: './dist/js/',
+              ext: '.min.js',
+            },
+          ],
+        },
+      },
     });
   
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
   
-    grunt.registerTask('default', ['less', 'cssmin', 'watch']);
-  };
+    grunt.registerTask('default', ['less', 'cssmin', 'uglify', 'watch']);  
+};
   

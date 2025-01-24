@@ -1,9 +1,6 @@
 @import 'variables.less';
 
 body {
-  background-color: @colors[background];
-  color: @colors[text];
-  font-family: @font-family;
   margin: 0;
   padding: 1rem;
   display: flex;
@@ -11,6 +8,15 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+
+  background-color: @colors-dark[background];
+  color: @colors-dark[text];
+  font-family: @font-family;
+
+  &.light-mode {
+    background-color: @colors-light[background];
+    color: @colors-light[text];
+  }
 }
 
 .header {
