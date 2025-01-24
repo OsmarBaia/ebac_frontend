@@ -1,0 +1,1 @@
+{"version":3,"sources":["media.less"],"names":[],"mappings":"AAAA,oCACI,gBACE,YAAA,MAIJ,oCACE,gBACE,YAAA","file":"media.css","sourcesContent":["@media screen and (max-width: 429px) {\r\n    .projects__link {\r\n      line-height: 1rem;\r\n    }\r\n  }\r\n  \r\n  @media screen and (min-width: 430px) {\r\n    .projects__link {\r\n      line-height: 2rem;\r\n    }\r\n  }"]}
