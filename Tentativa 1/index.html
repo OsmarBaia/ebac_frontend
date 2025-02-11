@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Repetições</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 d-flex flex-column align-items-center">
+        <h1 class="text-center mb-4">Calculador de Repetições</h1>
+        <form id="calculadorForm" class="d-flex flex-column align-items-center border border-secondary shadow rounded p-4" style="max-width: 425px;">
+            <!-- nome -->
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <!-- quantidade de séries -->
+            <div class="mb-3">
+                <label for="series" class="form-label">Qtde de Séries:</label>
+                <input type="number" class="form-control" id="series" placeholder="Digite o número de séries" required>
+            </div>
+            <!-- repetições por série -->
+            <div class="mb-3">
+                <label for="repeticoes" class="form-label">Repetições por Série:</label>
+                <input type="number" class="form-control" id="repeticoes" placeholder="Digite o número de repetições" required>
+            </div>
+            <!-- calcular -->
+            <button type="submit" class="btn btn-primary align-items-center">Calcular</button>
+        </form>
+        <!-- saída -->
+        <div id="mensagemSaida" class="mt-4 alert alert-info" style="display: none;"></div>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Script TypeScript compilado -->
+    <script src="script.js"></script>
+</body>
+</html>
