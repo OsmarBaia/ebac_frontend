@@ -1,0 +1,27 @@
+{
+  "name": "ebac_frontend",
+  "version": "1.0.0",
+  "description": "Esse repositório destina-se a armazenar as atividades práticas do módulo front-end do curso full stack da EBAC.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsmarBaia/ebac_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OsmarBaia/ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/OsmarBaia/ebac_frontend#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
+  }
+}
