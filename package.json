@@ -1,0 +1,24 @@
+{
+  "name": "ebac_frontend",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsmarBaia/ebac_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OsmarBaia/ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/OsmarBaia/ebac_frontend#readme",
+  "description": "",
+  "devDependencies": {
+    "typescritp": "^1.0.0"
+  }
+}
