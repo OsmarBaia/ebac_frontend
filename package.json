@@ -1,0 +1,24 @@
+{
+  "name": "ebac_frontend",
+  "version": "1.0.0",
+  "description": "1) Os arquivos estão disponibilizados abaixo, no material de apoio. O HTML fornecido já possui classes; atualize essas classes de acordo com a Metodologia BEM. Ou seja, faça a separação em blocos, elementos e/ou modificadores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsmarBaia/ebac_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OsmarBaia/ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/OsmarBaia/ebac_frontend#readme",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}

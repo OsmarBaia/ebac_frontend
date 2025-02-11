@@ -1,41 +1,89 @@
-$cor-destaque: #ffff42;
-$cor-borda-destaque: gold;
-$cor-texto: gray;
+$theme-colors: (
+  border: #dee2e6,
+  shadow: rgba(0, 0, 0, 0.15),
+  highlight: #0d6efd,
+  background-light: #f8f9fa,
+  background-dark: #e9ecef
+);
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+@mixin box-shadow {
+  box-shadow: 0 0.5rem 1rem map-get($theme-colors, shadow);
 }
 
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
 .produtos {
-    max-width: 640px;
-    width: 100%;
-    margin: 56px auto;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-column-gap: 1%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid map-get($theme-colors, border);
+  @include box-shadow;
+  @include border-radius(2rem);
+  padding: 0 0 2rem;
 }
 
 .produto {
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
 
-    &__imagem { 
-        width: 100%;
-    }
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        }
+  }
 
-    &__nome { 
-        font-size: 1.2em;
-        margin: 8px 0;
-    }
+  &:first-child .produto__name {
+    @include border-radius(1rem 1rem 0 0);
+  }
 
-    &__descricao { 
-        color: $cor-texto;
-    }
 
-    &--em-destaque {
-        border: 2px solid $cor-borda-destaque;
-        padding: 8px;
-        background-color: $cor-destaque;
-    }
 }
+
+.produto__name {
+  background-color: map-get($theme-colors, background-dark);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.produto__descricao {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border: 1px solid map-get($theme-colors, border);
+  @include border-radius(0.5rem);
+  @include box-shadow;
+  padding: 1rem;
+  text-align: center;
+  gap: 0.5rem;
+  min-width: 200px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.produto__imagem {
+  width: 100px;
+  height: 100px;
+  @include border-radius(0.5rem);
+  object-fit: cover;
+}
+
+.produto--em-destaque {
+  border: 3px solid map-get($theme-colors, highlight);
+  background-color: map-get($theme-colors, background-light);
+} 
