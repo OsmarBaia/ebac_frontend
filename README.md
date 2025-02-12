@@ -10,8 +10,8 @@
 4) O exercício deve ser entregue por meio do GitHub e armazenado na branch "boas_praticas_css" do seu repositório. Caso tenha utilizado algum pré-processador (SASS ou Less), certifique-se de incluir os arquivos correspondentes no repositório.
 
 ### Referência
-![reference](./reference.png)
+![reference](./images/reference.png)
 
 
 ## Resultado
-![preview](./preview.png)
+![preview](./images/preview.png)
