@@ -1,0 +1,14 @@
+{
+    "name": "exercicio",
+    "version": "1.0.0",
+    "description": "Boas Praticas CSS",
+    "scripts": {
+      "sass": "sass",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Osmar Neto",
+    "license": "ISC",
+    "devDependencies": {
+      "sass": "^1.63.6"
+    }
+  }
