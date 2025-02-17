@@ -1,17 +1,3 @@
-# Exercício Cypress
-## Objetivos
-1) Criar um projeto de testes utilizando o Cypress;
-2) No script de testes você deverá testar as funcionalidades da aplicação disponível no link https://agenda-contatos-react.vercel.app/;
-3) Testar as funcionalidades:
-+ inclusão;
-+ alteração;
-+ remoção de um contato;
-
-## Resultado
-![preview](./preview.png)
-
-## Código fonte
-```
 describe('Agenda de Contatos - Testes Automatizados', () => {
     beforeEach(() => {
       cy.visit('https://agenda-contatos-react.vercel.app/');
@@ -41,4 +27,3 @@ describe('Agenda de Contatos - Testes Automatizados', () => {
     });
   });
   
-```
